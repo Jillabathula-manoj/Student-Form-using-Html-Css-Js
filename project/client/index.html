@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Student Form</title>
+</head>
+<body>
+  <h1 id="stu">Student Form</h1>
+  <form id="studentForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required  onchange="validateName()">
+    <span id="nameError" style="color: red;"></span><br><br>
+ 
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" required onchange="validateAge()" >
+    <span id="ageError" style="color: red;"></span><br><br>
+ 
+    <label for="grade">Grade:</label>
+    <input type="text" id="grade" name="grade" required onchange="validateGrade()" >
+    <span id="gradeError" style="color: red;"></span><br><br>
+ 
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required onchange="validateEmail()">
+    <span id="emailError" style="color: red;"></span><br><br>
+ 
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required onchange="validatePhone()" pattern="[0-9]{10}">
+    <span id="phoneError" style="color: red;"></span><br><br>
+ 
+    <button type="button" id="submit_btn" onclick="submitForm()">Submit</button>
+    <button type="button" id="view_btn" onclick="viewData()">ViewData</button>
+  </form>
+  <!-- Display section -->
+  <div id="displaySection" class="styled-section" style="display: none;">
+    <h2>Stored Form Data</h2>
+    <table border="1" id="dataTable">
+      <!-- Table headers -->
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Grade</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      
+      </tr>
+    </table>
+    
+
+      
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html> 
+
